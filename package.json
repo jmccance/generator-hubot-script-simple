@@ -1,0 +1,29 @@
+{
+  "name": "generator-hubot-script-simple",
+  "version": "0.1.0",
+  "description": "A simple generator for Hubot scripts.",
+  "files": [
+    "app",
+    "javascript"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "hubot"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.20.2"
+  },
+  "author": "jmccance",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jmccance/hubot-coffeescript-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jmccance/generator-hubot-script-simple/issues"
+  },
+  "homepage": "https://github.com/jmccance/generator-hubot-script-simple#readme",
+  "devDependencies": {
+    "hubot": "^2.13.2"
+  }
+}
