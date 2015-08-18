@@ -4,7 +4,7 @@
   "description": "A simple generator for Hubot scripts.",
   "files": [
     "app",
-    "javascript"
+    "js"
   ],
   "keywords": [
     "yeoman-generator",
