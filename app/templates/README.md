@@ -1,3 +1,11 @@
-# hubot-coffeescript-template
+# <%= scriptName =>
 
-This is a template project for creating a CoffeeScript-based Hubot script.
+<%= scriptDescription =>
+
+## Testing
+
+To test this script interactively, run:
+
+```
+npm run shell
+```

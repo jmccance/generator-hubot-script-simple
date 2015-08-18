@@ -1,6 +1,6 @@
 # generator-hubot-script-simple
 
-A simple Yeoman generator for Hubot scripts.
+A simple Yeoman generator for Hubot scripts. Currently provides templates for CoffeeScript and JavaScript.
 
 ## Usage
 
@@ -18,11 +18,3 @@ mkdir my-script
 cd my-script
 yo hubot-script-simple
 ```
-
-If you'd prefer to work in JavaScript:
-
-
-```
-yo hubot-script-simple:javascript
-```
-
