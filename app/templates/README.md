@@ -1,6 +1,6 @@
-# <%= scriptName =>
+# <%= scriptName %>
 
-<%= scriptDescription =>
+<%= scriptDescription %>
 
 ## Testing
 
