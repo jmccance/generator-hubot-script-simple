@@ -1,6 +1,11 @@
 var generators = require('yeoman-generator');
 var path = require('path');
 
+var Langs = {
+  CoffeeScript: 'coffee',
+  JavaScript: 'js'
+};
+
 module.exports = generators.Base.extend({
   prompting: function () {
     var done = this.async();
@@ -23,14 +28,14 @@ module.exports = generators.Base.extend({
         choices: [
           {
             name: 'CoffeeScript',
-            value: 'coffee'
+            value: Langs.CoffeeScript
           },
           {
             name: 'JavaScript',
-            value: 'js'
+            value: Langs.JavaScript
           }
         ],
-        default: 'coffee'
+        default: Langs.CoffeeScript
       }
     ], function (answers) {
       this.scriptName = answers.scriptName;
@@ -57,6 +62,12 @@ module.exports = generators.Base.extend({
       this.templatePath(this.scriptLang),
       this.destinationPath('scripts'),
       context
-    )
+    );
+  },
+
+  install: function () {
+    if (this.scriptLang == Langs.CoffeeScript) {
+      this.npmInstall(['coffee-script', 'hubot'], { 'saveDev': true });
+    }
   }
 });
