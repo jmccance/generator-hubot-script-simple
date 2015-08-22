@@ -66,8 +66,6 @@ module.exports = generators.Base.extend({
   },
 
   install: function () {
-    if (this.scriptLang == Langs.CoffeeScript) {
-      this.npmInstall(['coffee-script', 'hubot'], { 'saveDev': true });
-    }
+    this.npmInstall(['coffee-script', 'hubot'], { 'saveDev': true });
   }
 });
