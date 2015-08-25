@@ -9,10 +9,6 @@
   },
   "keywords": [
     "hubot",
-    "script",
-    "template"
-  ],
-  "devDependencies": {
-    "hubot": "^2.13.2"
-  }
+    "hubot-scripts"
+  ]
 }

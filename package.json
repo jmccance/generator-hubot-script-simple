@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/jmccance/generator-hubot-script-simple#readme",
   "devDependencies": {
+    "eslint": "^1.2.1",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
     "hubot": "^2.13.2"
   }
 }
