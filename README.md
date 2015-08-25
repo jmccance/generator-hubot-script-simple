@@ -8,8 +8,10 @@ Install the generator and Yeoman:
 
 ```
 npm install -g yo bower grunt-cli gulp
-npm install -g git+https://github.com/jmccance/generator-hubot-script-simple
+npm install -g generator-hubot-script-simple
 ```
+
+Note that you may need to `sudo` in order to run `npm install -g` on your machine.
 
 Then create a new directory and create your script:
 
