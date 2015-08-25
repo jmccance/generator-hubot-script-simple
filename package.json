@@ -1,6 +1,6 @@
 {
   "name": "generator-hubot-script-simple",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple generator for Hubot scripts.",
   "files": [
     "app",
