@@ -3,8 +3,7 @@
   "version": "0.2.0",
   "description": "A simple generator for Hubot scripts.",
   "files": [
-    "app",
-    "js"
+    "app"
   ],
   "keywords": [
     "yeoman-generator",

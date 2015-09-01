@@ -21,3 +21,5 @@ gulp.task('lint-js-templates', function () {
 });
 
 gulp.task('lint', ['lint-generators', 'lint-js-templates']);
+
+gulp.task('default', ['lint']);

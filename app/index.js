@@ -3,6 +3,7 @@ var path = require('path');
 
 var Langs = {
   CoffeeScript: 'coffee',
+  EcmaScript6: 'es6',
   JavaScript: 'js'
 };
 
@@ -31,6 +32,10 @@ module.exports = generators.Base.extend({
             value: Langs.CoffeeScript
           },
           {
+            name: 'EcmaScript 6',
+            value: Langs.EcmaScript6
+          },
+          {
             name: 'JavaScript',
             value: Langs.JavaScript
           }
@@ -53,19 +58,37 @@ module.exports = generators.Base.extend({
     };
 
     this.fs.copyTpl(
-      this.templatePath('*'),
+      this.templatePath('shared/**/*'),
       this.destinationPath(),
-      context
+      context,
+      { globOptions: { dot: true } }
     );
 
     this.fs.copyTpl(
-      this.templatePath(this.scriptLang),
-      this.destinationPath('scripts'),
-      context
+      this.templatePath(this.scriptLang + '/**/*'),
+      this.destinationPath(),
+      context,
+      { globOptions: { dot: true } }
     );
   },
 
   install: function () {
     this.npmInstall(['coffee-script', 'hubot'], { 'saveDev': true });
+
+    switch (this.scriptLang) {
+      case Langs.EcmaScript6:
+        this.npmInstall(
+          [
+            'babel-eslint',
+            'del',
+            'gulp',
+            'gulp-babel',
+            'gulp-eslint'
+          ],
+          { 'saveDev': true });
+        break;
+
+      default:
+    }
   }
 });
