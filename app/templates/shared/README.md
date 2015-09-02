@@ -7,5 +7,5 @@
 To test this script interactively, run:
 
 ```
-npm run shell
+npm start
 ```

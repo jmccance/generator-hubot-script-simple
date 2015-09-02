@@ -46,6 +46,11 @@ module.exports = generators.Base.extend({
       this.scriptName = answers.scriptName;
       this.scriptDescription = answers.scriptDescription;
       this.scriptLang = answers.scriptLang;
+
+      if (this.scriptLang == Langs.EcmaScript6) {
+        this.preStartScript = '"prestart": "gulp",';
+      }
+
       done();
     }.bind(this));
   },
@@ -54,21 +59,20 @@ module.exports = generators.Base.extend({
     var context = {
       scriptName: this.scriptName,
       scriptDescription: this.scriptDescription,
-      scriptLang: this.scriptLang
+      scriptLang: this.scriptLang,
+      preStartScript: this.preStartScript
     };
 
     this.fs.copyTpl(
       this.templatePath('shared/**/*'),
       this.destinationPath(),
-      context,
-      { globOptions: { dot: true } }
+      context
     );
 
     this.fs.copyTpl(
       this.templatePath(this.scriptLang + '/**/*'),
       this.destinationPath(),
-      context,
-      { globOptions: { dot: true } }
+      context
     );
 
     // Hack because mem-fs-editor is not properly copying over the glob options.

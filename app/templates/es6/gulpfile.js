@@ -31,4 +31,4 @@ gulp.task('compile', function() {
     .pipe(gulp.dest(paths.target));
 });
 
-gulp.task('default', ['clean', 'lint' 'compile']);
+gulp.task('default', ['clean', 'lint', 'compile']);
