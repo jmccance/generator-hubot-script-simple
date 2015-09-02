@@ -48,7 +48,9 @@ module.exports = generators.Base.extend({
       this.scriptLang = answers.scriptLang;
 
       if (this.scriptLang == Langs.EcmaScript6) {
-        this.preStartScript = '"prestart": "gulp",';
+        this.npmScripts =
+          '"prestart": "gulp",\n' +
+          '"prepublish": "gulp",';
       }
 
       done();
@@ -60,7 +62,7 @@ module.exports = generators.Base.extend({
       scriptName: this.scriptName,
       scriptDescription: this.scriptDescription,
       scriptLang: this.scriptLang,
-      preStartScript: this.preStartScript
+      npmScripts: this.npmScripts
     };
 
     this.fs.copyTpl(

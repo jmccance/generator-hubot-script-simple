@@ -4,7 +4,7 @@
   "description": "<%= scriptDescription %>",
   "main": "index.js",
   "scripts": {
-    <%- preStartScript %>
+    <%- npmScripts %>
     "start": "hubot --adapter shell --disable-httpd",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
