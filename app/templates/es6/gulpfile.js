@@ -31,5 +31,4 @@ gulp.task('compile', function() {
     .pipe(gulp.dest(paths.target));
 });
 
-// TODO Fix linting by ensuring .eslintrc is copied over correctly.
-gulp.task('default', ['clean', 'compile']);
+gulp.task('default', ['clean', 'lint' 'compile']);

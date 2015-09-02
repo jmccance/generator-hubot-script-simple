@@ -70,6 +70,12 @@ module.exports = generators.Base.extend({
       context,
       { globOptions: { dot: true } }
     );
+
+    // Hack because mem-fs-editor is not properly copying over the glob options.
+    this.fs.copy(
+      this.templatePath(this.scriptLang + '/**/.*'),
+      this.destinationPath()
+    );
   },
 
   install: function () {
