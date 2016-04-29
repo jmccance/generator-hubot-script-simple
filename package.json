@@ -1,6 +1,6 @@
 {
   "name": "generator-hubot-script-simple",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple generator for Hubot scripts.",
   "files": [
     "app"
@@ -16,7 +16,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jmccance/hubot-coffeescript-template.git"
+    "url": "git://github.com/jmccance/generator-hubot-script-simple.git"
   },
   "bugs": {
     "url": "https://github.com/jmccance/generator-hubot-script-simple/issues"
